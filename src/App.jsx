@@ -18,7 +18,6 @@ export default function App() {
   }
 
 
-
   const forceUpdate = useForceUpdate();
   const handleChange = (e) => {
     setNumber(e.target.value);
@@ -37,7 +36,7 @@ export default function App() {
   };
 
 
-  function sleep(ms) {
+  const sleep = (ms) => {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
 
@@ -50,7 +49,6 @@ export default function App() {
           min = j;
       }
       if (min !== i) {
-        console.log(" swap " + arr[i] + " and " + arr[min])
         await sleep(100);
         [arr[i], arr[min]] = [arr[min], arr[i]];
         forceUpdate();
@@ -110,7 +108,7 @@ export default function App() {
     <div className="App">
       <body>
 
-        <h1 style={{ marginBottom: 15, letterSpacing: 15}}>  SORTING VISUALIZER </h1>
+        <h1 style={{ marginBottom: 15, letterSpacing: 15 }}>  SORTING VISUALIZER </h1>
         <input
           placeholder="Enter a number"
           value={number}

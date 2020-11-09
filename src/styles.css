@@ -37,6 +37,10 @@ button {
   box-shadow: 5px 5px 10px #8c8c8c, -5px -3px 10px #bababa;
 }
 
+button:hover {
+  box-shadow: 5px 5px 10px #505050, -5px -3px 10px #bababa;
+}
+
 input {
   outline: none;
   border-radius: 10px;
